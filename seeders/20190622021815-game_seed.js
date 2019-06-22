@@ -2,13 +2,14 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
+
     return queryInterface.bulkInsert('Games', [{
       title: 'Fix it Felix Jr.',
       price: 50,
       releaseYear: 1982,
       active: true,
       createdAt: new Date(),
-      updatedAd: new Date()
+      updatedAt: new Date()
     },
     {
       title: 'Ms. Pac Man',
@@ -33,7 +34,8 @@ module.exports = {
       active: true,
       createdAt: new Date(),
       updatedAt: new Date()
-    }, {}])
+    }
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {
